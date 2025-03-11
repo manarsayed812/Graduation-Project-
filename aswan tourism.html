@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- css style -->
+    <link rel="stylesheet" href="../../../css/style.css">
+
+    <link rel="stylesheet" href="../../../css/second-pages-style.css">
+    <title>سياحة أسوان</title>
+
+    <link rel="shortcut icon" type="image/icon" href="../../../pic/logo/logo.png" />
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <a class="navbar-brand" href="#">
+            <img src="../../../pic/logo/logo.png" width="120px" height="60px" />
+        </a>
+        <ul class="menu">
+            <li class="nav-item">
+                <a class="nav-link active translatable reverse-text" aria-current="page" href="../../../../index.html">الصفحة
+                    الرئيسية</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link translatable reverse-text" href="../../../../index.html#destination">وجهتك
+                    القادمة</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link translatable reverse-text" href="../../login.html" target="_blank">سجل</a>
+            </li>
+        </ul>
+    </header>
+
+    <!-- slider -->
+    <div class="slider">
+        <!-- list Items -->
+        <div class="list">
+            <div class="item active">
+                <img src="./صور اسوان/الفيلة.jpg">
+                <div class="content">
+                    <div class="rating">
+                        <input type="radio" id="star5-1" name="rate1" value="5"><label for="star5-1">★</label>
+                        <input type="radio" id="star4-1" name="rate1" value="4"><label for="star4-1">★</label>
+                        <input type="radio" id="star3-1" name="rate1" value="3" checked><label for="star3-1">★</label>
+                        <input type="radio" id="star2-1" name="rate1" value="2"><label for="star2-1">★</label>
+                        <input type="radio" id="star1-1" name="rate1" value="1"><label for="star1-1">★</label>
+                    </div>
+                    <br />
+                    <h2>معبد الفيلة</h2>
+                    <p>واحد من أهم المعابد المصرية القديمة، كان مهدد بالغرق بسبب بناء السد العالي، لكن تم نقله لمكانه الحالي على جزيرة أجيليكا. بيتميز بمناظر ساحرة خاصة عند الإضاءة الليلية.
+
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./صور اسوان/المتحف النوبي.webp">
+                <div class="content">
+                    <div class="rating">
+                        <input type="radio" id="star5-2" name="rate2" value="5"><label for="star5-2">★</label>
+                        <input type="radio" id="star4-2" name="rate2" value="4"><label for="star4-2">★</label>
+                        <input type="radio" id="star3-2" name="rate2" value="3" checked><label for="star3-2">★</label>
+                        <input type="radio" id="star2-2" name="rate2" value="2"><label for="star2-2">★</label>
+                        <input type="radio" id="star1-2" name="rate2" value="1"><label for="star1-2">★</label>
+                    </div>
+                    <br />
+                    <h2>المتحف النوبي</h2>
+                    <p>اُفتتح متحف النوبة عام ١٩٩٧م بتصميم معماري متميز من ثلاث طوابق يعكس العمارة التقليدية المحلية النوبية، كما تم تكسية جدرانه بالحجر الرملي والجرانيت الوردي المستوحى من طبيعة المنطقة الصخرية المحيطة به، فاستحق الحصول على جائزة أغاخان
+                        للعمارة الإسلامية كأفضل مبنى معماري شُيد عام 2001م.</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./صور اسوان/ابو سمبل 2.jpg">
+                <div class="content">
+                    <div class="rating">
+                        <input type="radio" id="star5-3" name="rate3" value="5"><label for="star5-3">★</label>
+                        <input type="radio" id="star4-3" name="rate3" value="4"><label for="star4-3">★</label>
+                        <input type="radio" id="star3-3" name="rate3" value="3" checked><label for="star3-3">★</label>
+                        <input type="radio" id="star2-3" name="rate3" value="2"><label for="star2-3">★</label>
+                        <input type="radio" id="star1-3" name="rate3" value="1"><label for="star1-3">★</label>
+                    </div>
+                    <br />
+                    <h2>معبد أبو سمبل</h2>
+                    <p>من أعظم معابد الفراعنة، بناه الملك رمسيس الثاني، ويشتهر بظاهرة تعامد الشمس على وجهه مرتين في السنة (في 22 فبراير و22 أكتوبر).
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- button arrows -->
+        <div class="arrows">
+            <button id="prev">
+                <</button>
+            <button id="next">></button>
+        </div>
+        <section id="comments" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">التعليقات</h2>
+                <div id="comments-list"></div>
+                <!-- سيتم تحميل التعليقات هنا -->
+            </div>
+        </section>
+        <!-- thumbnail -->
+        <div class="thumbnail">
+
+            <div class="item active">
+                <div class="flip-card">
+
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="./صور اسوان/الفيلة.jpg">
+                        </div>
+                        <div class="flip-card-back">
+                            <button class="btn" onclick="openModal('modal1')">معلومات</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="flip-card">
+
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="./صور اسوان/المتحف النوبي.webp">
+                        </div>
+                        <div class="flip-card-back">
+                            <button class="btn" onclick="openModal('modal2')">معلومات</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item ">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="./صور اسوان/ابو سمبل 2.jpg">
+                        </div>
+                        <div class="flip-card-back">
+                            <button class="btn" onclick="openModal('modal3')">معلومات</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- النوافذ المنبثقة -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <div class="loc py-2">
+                <button class="btn"><a href="https://ar.wikipedia.org/wiki/%D9%81%D9%8A%D9%84%D8%A9" target="_blank" class="nav-link tit">الموقع</a></button>
+            </div>
+            <div class="call">
+                <button class="btn tit" onclick="makeCall('000')">اتصل الأن</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <div class="loc py-2">
+                <button class="btn"><a href="https://ar.wikipedia.org/wiki/%D9%85%D8%AA%D8%AD%D9%81_%D8%A7%D9%84%D9%86%D9%88%D8%A8%D8%A9" target="_blank" class="nav-link tit">الموقع</a></button>
+            </div>
+            <div class="call">
+                <button class="btn tit" onclick="makeCall('000')">اتصل الأن</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <div class="loc py-2">
+                <button class="btn"><a href="https://ar.wikipedia.org/wiki/%D8%A3%D8%A8%D9%88_%D8%B3%D9%85%D8%A8%D9%84" target="_blank" class="nav-link tit">الموقع</a></button>
+            </div>
+            <div class="call">
+                <button class="btn tit" onclick="makeCall('000')">اتصل الأن</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- script -->
+
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- js srcipt -->
+    <script src="../../../js/second-pages-main.js"></script>
+    <script src="comments.js"></script>
+
+</body>
+
+</html>

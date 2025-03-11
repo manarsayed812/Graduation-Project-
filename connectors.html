@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليلك - خدمات المواصلات</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background: #f8f9fa;
+        }
+        
+        main {
+            padding: 2rem 5%;
+            min-height: 100vh;
+        }
+        /* الشعار */
+        
+        .logo {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .logo h1 {
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+        }
+        
+        .logo h1 span:first-child {
+            color: #000;
+        }
+        
+        .logo h1 span:last-child {
+            color: #2196F3;
+        }
+        /* حقل البحث */
+        
+        .search-container {
+            max-width: 600px;
+            margin: 0 auto 3rem;
+            position: relative;
+        }
+        
+        #search-input {
+            width: 100%;
+            padding: 15px 50px 15px 25px;
+            border: 2px solid #e0e0e0;
+            border-radius: 30px;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+        
+        #search-input:focus {
+            border-color: #2196F3;
+            box-shadow: 0 0 8px rgba(33, 150, 243, 0.2);
+        }
+        
+        .search-icon {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #2196F3;
+        }
+        /* شبكة الخدمات */
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        /* بطاقة الخدمة */
+        
+        .service-card {
+            background: #fff;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-card img {
+            width: 100%;
+            height: 120px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+        
+        .service-card h2 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .service-link {
+            display: inline-block;
+            background: #2196F3;
+            color: #fff !important;
+            padding: 8px 25px;
+            border-radius: 20px;
+            text-decoration: none;
+            transition: 0.3s;
+            font-size: 0.9rem;
+        }
+        
+        .service-link:hover {
+            background: #1976D2;
+        }
+        /* التكيف مع الشاشات الصغيرة */
+        
+        @media (max-width: 768px) {
+            main {
+                padding: 1.5rem;
+            }
+            .logo h1 {
+                font-size: 2rem;
+            }
+            .services-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 1rem;
+            }
+            .service-card img {
+                height: 100px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            #search-input {
+                padding: 12px 45px 12px 20px;
+                font-size: 0.9rem;
+            }
+            .search-icon {
+                right: 15px;
+            }
+        }
+        /* رسالة  */
+        
+        .service-card {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #1976D2;
+            color: #fff;
+            padding: 10px;
+            font-size: 0.9rem;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(100%);
+            transition: all 0.2s ease-in-out;
+        }
+        
+        .service-card:hover .service-info {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <!-- الشعار -->
+        <div class="logo">
+            <h1><span>دلي</span><span>لك</span></h1>
+        </div>
+
+        <!-- حقل البحث -->
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="ابحث عن خدمة...">
+            <span class="search-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z" fill="currentColor"/>
+                </svg>
+            </span>
+        </div>
+
+        <!-- قائمة الخدمات -->
+        <div class="services-grid">
+            <!-- أوبر -->
+            <div class="service-card">
+                <img src="./المواصلات/اوبر.png" alt="اوبر">
+                <h2>اوبر</h2>
+                <a href="https://www.uber.com/eg/ar/" class="service-link">Uber</a>
+                <div class="service-info">متوفر في القاهرة، الجيزة، الإسكندرية، وبعض المحافظات الأخرى</div>
+            </div>
+
+            <!-- كريم -->
+            <div class="service-card">
+                <img src="./المواصلات/كريم.png" alt="كريم">
+                <h2>كريم</h2>
+                <a href="https://www.careem.com/" class="service-link">Careem</a>
+                <div class="service-info">متوفر في القاهرة، الجيزة، الإسكندرية</div>
+            </div>
+
+            <!-- سويفل -->
+            <div class="service-card">
+                <img src="./المواصلات/سويفل.png" alt="سويفل">
+                <h2>سويفل</h2>
+                <a href="https://www.swvl.com/" class="service-link">Swvl</a>
+                <div class="service-info">متوفر في القاهرة، الجيزة</div>
+            </div>
+
+            <!-- هلاّن -->
+            <div class="service-card">
+                <img src="./المواصلات/هلاّن.png" alt="هلاّن">
+                <h2>هلاّن</h2>
+                <a href="https://halan.com/" class="service-link">halan</a>
+                <div class="service-info">متوفر في القاهرة والجيزة</div>
+            </div>
+
+            <!-- بولت -->
+            <div class="service-card">
+                <img src="./المواصلات/بولت.jpg" alt="بولت">
+                <h2>بولت</h2>
+                <a href="https://bolt.eu/ar-eg/" class="service-link">Bolt</a>
+                <div class="service-info">متوفر في القاهرة، الجيزة، الإسكندرية</div>
+            </div>
+
+            <!-- زووم كار -->
+            <div class="service-card">
+                <img src="./المواصلات/زووم كار .png" alt="زووم كار">
+                <h2>زووم كار</h2>
+                <a href="https://www.zoomcar.com/in/host/en/bangalore" class="service-link">Zoomcar</a>
+                <div class="service-info">متوفر في القاهرة والجيزة</div>
+            </div>
+
+            <!-- ديدي -->
+            <div class="service-card">
+                <img src="./المواصلات/ديدي .png" alt="ديدي">
+                <h2>DiDi</h2>
+                <a href="https://web.didiglobal.com/eg/" class="service-link">DiDi</a>
+                <div class="service-info">متوفر في القاهرة والجيزة</div>
+            </div>
+
+            <!-- InDriver -->
+            <div class="service-card">
+                <img src="./المواصلات/InDriver.png" alt="InDriver">
+                <h2>ان دريفر</h2>
+                <a href="https://indrive.com/" class="service-link">InDriver</a>
+                <div class="service-info">متوفر في القاهرة، الجيزة، وبعض المحافظات الأخرى</div>
+            </div>
+
+            <!-- Go Bus -->
+            <div class="service-card">
+                <img src="./المواصلات/جو باص.jpg" alt="Go Bus">
+                <h2>Go Bus</h2>
+                <a href="https://go-bus.com/" class="service-link">Go Bus</a>
+                <div class="service-info">متوفر في القاهرة، الإسكندرية، الغردقة، شرم الشيخ، الأقصر، وأسوان</div>
+            </div>
+
+            <!-- أبيلا مصر -->
+            <div class="service-card">
+                <img src="./المواصلات/ابيلا مصر.jpeg" alt="أبيلا مصر">
+                <h2>أبيلا مصر - قطارات النوم</h2>
+                <a href="https://abelatrains.com/" class="service-link">Abela</a>
+                <div class="service-info">متوفر في القاهرة، الجيزة، الإسكندرية، أسوان، الأقصر، قنا، ومرسى مطروح</div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#search-input').on('keyup', function() {
+                const searchTerm = $(this).val().toLowerCase();
+                $('.service-card').each(function() {
+                    const text = $(this).text().toLowerCase();
+                    $(this).toggle(text.includes(searchTerm));
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

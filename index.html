@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- css style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>دليلك</title>
+
+    <link rel="shortcut icon" type="image/icon" href="assets/pic/logo/logo.png" />
+</head>
+
+<body>
+    <!-- start navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg" id="navbar">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/pic/logo/logo.png" width="120px" height="60px" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="dark-mode">
+                    <button class="toggle-btn" onclick="toggleDarkMode()">
+                        <div class="sun-rays"></div>
+                        <div class="main-circle"></div>
+                    </button>
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active translatable reverse-text" aria-current="page" href="#hero">الصفحة
+                                الرئيسية</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link translatable reverse-text" href="#destination">وجهتك القادمة</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link translatable reverse-text" href="#footer">أتصل بنا</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link translatable reverse-text" href="assets/pages/login.html" target="_blank">سجل</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link translatable reverse-text" href="./assets/pages/connectors.html" target="_blank">المواصلات</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="search-btn">
+                    <form>
+                        <label for="search">Search</label>
+                        <input required="" pattern=".*\S.*" type="search" class="input" id="search">
+                        <span class="caret"></span>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- end navbar -->
+
+    <!-- start hero -->
+    <div id="hero" class="hero">
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button style="background-color: white; width: 10px; height: 10px; border-radius: 50%;" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button style="background-color: white; width: 10px; height: 10px; border-radius: 50%;" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button style="background-color: white; width: 10px; height: 10px; border-radius: 50%;" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="5000">
+                    <img src="assets/pic/hero-pic/hero-img-1.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center text-center w-100 h-100" style="background: rgba(0, 0, 0, 0.5);">
+                        <h2 class="text-white pb-3 translatable">نحن هنا من أجلك من أجل ان نساعدك على تحديد وجهتك القادمة
+                        </h2>
+                        <button class="button"><a href="#footer">تواصل معنا</a></button>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                    <img src="assets/pic/hero-pic/hero-img-2.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center text-center w-100 h-100" style="background: rgba(0, 0, 0, 0.5);">
+                        <h2 class="text-white pb-3 translatable">نحن هنا من أجلك من أجل ان نساعدك على تحديد وجهتك القادمة
+                        </h2>
+                        <button class="button"><a href="#footer">تواصل معنا</a></button>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                    <img src="assets/pic/hero-pic/hero-img-3.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center text-center w-100 h-100" style="background: rgba(0, 0, 0, 0.5);">
+                        <h2 class="text-white pb-3 translatable">نحن هنا من أجلك من أجل ان نساعدك على تحديد وجهتك القادمة
+                        </h2>
+                        <button class="button"><a href="#footer">تواصل معنا</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end hero -->
+
+    <!-- start section card -->
+    <section id="destination" class="py-5">
+        <div class="py-5 text-center">
+            <h2 class="fw-bold translatable">وجهتك القادمة</h2>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-4 mb-3 city-card" id="cairo">
+                    <div class="card toggle-card shadow-lg">
+                        <img src="assets/pic/governorates/cairo.png" class="card-img-top w-100" style="height: 11rem;" alt="img">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between reverse-text translatable">
+                                <h4 class="pb-2 translatable">القاهرة - Cairo
+                                    <div class="rating">
+                                        <input type="radio" id="star5-1" name="rate1" value="5"><label for="star5-1">★</label>
+                                        <input type="radio" id="star4-1" name="rate1" value="4"><label for="star4-1">★</label>
+                                        <input type="radio" id="star3-1" name="rate1" value="3" checked><label for="star3-1">★</label>
+                                        <input type="radio" id="star2-1" name="rate1" value="2"><label for="star2-1">★</label>
+                                        <input type="radio" id="star1-1" name="rate1" value="1"><label for="star1-1">★</label>
+                                    </div>
+                                </h4>
+                                <div class="d-flex justify-content-center align-items-start pt-2 pe-3">
+                                    <button class="button"><a href="assets/pages/cairo.html" class="nav-link"
+                                            target="_blank">اكتشف</a></button>
+                                </div>
+                            </div>
+                            <p class="card-text translatable">القاهرة، عاصمة مصر النابضة تجمع بين عبق التاريخ وحداثة الحاضر، حيث تحتضن أهرامات الجيزة والمتحف المصري الغني بالآثار الفرعونية، إلى جانب الأحياء القديمة مثل خان الخليلي، ما يجعلها وجهة سياحية لا تُضاهى.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-4 mb-3 city-card" id="alexandria">
+                    <div class="card toggle-card shadow-lg">
+                        <img src="assets/pic/governorates/alexandria.png" class="card-img-top w-100" style="height: 11rem;" alt="img">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between reverse-text translatable">
+                                <h4 class="pb-2 translatable">الأسكندرية - Alexandria
+                                    <div class="rating">
+                                        <input type="radio" id="star5-2" name="rate2" value="5"><label for="star5-2">★</label>
+                                        <input type="radio" id="star4-2" name="rate2" value="4"><label for="star4-2">★</label>
+                                        <input type="radio" id="star3-2" name="rate2" value="3" checked><label for="star3-2">★</label>
+                                        <input type="radio" id="star2-2" name="rate2" value="2"><label for="star2-2">★</label>
+                                        <input type="radio" id="star1-2" name="rate2" value="1"><label for="star1-2">★</label>
+                                    </div>
+                                </h4>
+                                <div class="d-flex justify-content-center align-items-start pt-2 pe-3">
+                                    <button class="button"><a href="assets/pages/alexandria.html" class="nav-link"
+                                            target="_blank">اكتشف</a></button>
+                                </div>
+                            </div>
+                            <p class="card-text translatable">الإسكندرية، عروس البحر الأبيض المتوسط، تتميز بشواطئها الخلابة ومعالمها التاريخية مثل مكتبة الإسكندرية وقلعة قايتباي، مما يجعلها وجهة ساحرة تجمع بين عبق التاريخ وسحر الطبيعة.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-4 mb-3 city-card" id="matrouh">
+                    <div class="card toggle-card shadow-lg">
+                        <img src="assets/pic/governorates/Matrouh.png" class="card-img-top w-100" style="height: 11rem;" alt="img">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between reverse-text translatable">
+                                <h4 class="pb-2 translatable">مرسى مطروح - Matrouh
+                                    <div class="rating">
+                                        <input type="radio" id="star5-3" name="rate3" value="5"><label for="star5-3">★</label>
+                                        <input type="radio" id="star4-3" name="rate3" value="4"><label for="star4-3">★</label>
+                                        <input type="radio" id="star3-3" name="rate3" value="3" checked><label for="star3-3">★</label>
+                                        <input type="radio" id="star2-3" name="rate3" value="2"><label for="star2-3">★</label>
+                                        <input type="radio" id="star1-3" name="rate3" value="1"><label for="star1-3">★</label>
+                                    </div>
+                                </h4>
+                                <div class="d-flex justify-content-center align-items-start pt-2 pe-3">
+                                    <button class="button"><a href="assets/pages/matrouh.html" class="nav-link"
+                                            target="_blank">اكتشف</a></button>
+                                </div>
+                            </div>
+                            <p class="card-text translatable">مرسى مطروح، جوهرة الساحل الشمالي، تشتهر بشواطئها ذات المياه الفيروزية والرمال البيضاء الناعمة، مثل شاطئ عجيبة وكليوباترا، مما يجعلها وجهة مثالية لمحبي الاستجمام والطبيعة الخلابة.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-lg-6 mb-3 city-card" id="luxor">
+                    <div class="card toggle-card shadow-lg">
+                        <img src="assets/pic/governorates/luxor.png" class="card-img-top w-100" style="height: 11rem;" alt="img">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between reverse-text translatable">
+                                <h4 class="pb-2 translatable">الأقصر - Luxor
+                                    <div class="rating">
+                                        <input type="radio" id="star5-4" name="rate4" value="5"><label for="star5-4">★</label>
+                                        <input type="radio" id="star4-4" name="rate4" value="4"><label for="star4-4">★</label>
+                                        <input type="radio" id="star3-4" name="rate4" value="3" checked><label for="star3-4">★</label>
+                                        <input type="radio" id="star2-4" name="rate4" value="2"><label for="star2-4">★</label>
+                                        <input type="radio" id="star1-4" name="rate4" value="1"><label for="star1-4">★</label>
+                                    </div>
+                                </h4>
+                                <div class="d-flex justify-content-center align-items-start pt-2 pe-3">
+                                    <button class="button"><a href="assets/pages/luxor.html" class="nav-link"
+                                            target="_blank">اكتشف</a></button>
+                                </div>
+                            </div>
+                            <p class="card-text translatable">الأقصر، متحف مفتوح على أرض مصر، تحتضن أعظم كنوز الحضارة الفرعونية، من معابد الكرنك والأقصر إلى وادي الملوك والملكات، مما يجعلها وجهة ساحرة لعشاق التاريخ والأثار.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-6 mb-3 city-card" id="aswan">
+                    <div class="card toggle-card shadow-lg">
+                        <img src="assets/pic/governorates/aswan.png" class="card-img-top w-100" style="height: 11rem;" alt="img">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between reverse-text translatable">
+                                <h4 class="pb-2 translatable">اسوان - Aswan
+                                    <div class="rating">
+                                        <input type="radio" id="star5-5" name="rate5" value="5"><label for="star5-5">★</label>
+                                        <input type="radio" id="star4-5" name="rate5" value="4"><label for="star4-5">★</label>
+                                        <input type="radio" id="star3-5" name="rate5" value="3" checked><label for="star3-5">★</label>
+                                        <input type="radio" id="star2-5" name="rate5" value="2"><label for="star2-5">★</label>
+                                        <input type="radio" id="star1-5" name="rate5" value="1"><label for="star1-5">★</label>
+                                    </div>
+                                </h4>
+                                <div class="d-flex justify-content-center align-items-start pt-2 pe-3">
+                                    <button class="button"><a href="assets/pages/aswan.html" class="nav-link"
+                                            target="_blank">اكتشف</a></button>
+                                </div>
+                            </div>
+                            <p class="card-text translatable">أسوان، لؤلؤة الجنوب، تتميز بسحر نيلها الهادئ، ومعابدها العريقة مثل فيلة وأبو سمبل، إلى جانب جزرها الخلابة كجزيرة النباتات، مما يجعلها وجهة مثالية لمحبي الهدوء والجمال الطبيعي.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end section card -->
+
+    <!-- start section emergency -->
+    <section id="emergency" class="emergency text-center">
+        <div class="py-5 text-center">
+            <h2 class="fw-bold translatable">في حالات الطوارئ</h2>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <div class="info-item">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="assets/pic/pic-info/Ambulance.png">
+                                </div>
+                                <div class="flip-card-back">
+                                    <button class="button" onclick="makeCall('123')">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" viewBox="0 0 32 32"
+                                            height="32" fill="none" class="svg-icon">
+                                            <path stroke-width="2" stroke-linecap="round" stroke="#fff"
+                                                fill-rule="evenodd"
+                                                d="m24.8868 19.1288c-1.0274-.1308-2.036-.3815-3.0052-.7467-.7878-.29-1.6724-.1034-2.276.48-.797.8075-2.0493.9936-2.9664.3258-1.4484-1.055-2.7233-2.3295-3.7783-3.7776-.6681-.9168-.4819-2.1691.3255-2.9659.5728-.6019.7584-1.4748.4802-2.2577-.3987-.98875-.6792-2.02109-.8358-3.07557-.2043-1.03534-1.1138-1.7807-2.1694-1.77778h-3.18289c-.60654-.00074-1.18614.25037-1.60035.69334-.40152.44503-.59539 1.03943-.53345 1.63555.344 3.31056 1.47164 6.49166 3.28961 9.27986 1.64878 2.5904 3.84608 4.7872 6.43688 6.4356 2.7927 1.797 5.9636 2.9227 9.2644 3.289h.1778c.5409.0036 1.0626-.2 1.4581-.569.444-.406.6957-.9806.6935-1.5822v-3.1821c.0429-1.0763-.7171-2.0185-1.7782-2.2046z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="info-item">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="assets/pic/pic-info/Police.png">
+                                </div>
+                                <div class="flip-card-back">
+                                    <button class="button" onclick="makeCall('122')">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" viewBox="0 0 32 32"
+                                            height="32" fill="none" class="svg-icon">
+                                            <path stroke-width="2" stroke-linecap="round" stroke="#fff"
+                                                fill-rule="evenodd"
+                                                d="m24.8868 19.1288c-1.0274-.1308-2.036-.3815-3.0052-.7467-.7878-.29-1.6724-.1034-2.276.48-.797.8075-2.0493.9936-2.9664.3258-1.4484-1.055-2.7233-2.3295-3.7783-3.7776-.6681-.9168-.4819-2.1691.3255-2.9659.5728-.6019.7584-1.4748.4802-2.2577-.3987-.98875-.6792-2.02109-.8358-3.07557-.2043-1.03534-1.1138-1.7807-2.1694-1.77778h-3.18289c-.60654-.00074-1.18614.25037-1.60035.69334-.40152.44503-.59539 1.03943-.53345 1.63555.344 3.31056 1.47164 6.49166 3.28961 9.27986 1.64878 2.5904 3.84608 4.7872 6.43688 6.4356 2.7927 1.797 5.9636 2.9227 9.2644 3.289h.1778c.5409.0036 1.0626-.2 1.4581-.569.444-.406.6957-.9806.6935-1.5822v-3.1821c.0429-1.0763-.7171-2.0185-1.7782-2.2046z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="info-item">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="assets/pic/pic-info/Civil-Defense.png">
+                                </div>
+                                <div class="flip-card-back">
+                                    <button class="button" onclick="makeCall('125')">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" viewBox="0 0 32 32"
+                                            height="32" fill="none" class="svg-icon">
+                                            <path stroke-width="2" stroke-linecap="round" stroke="#fff"
+                                                fill-rule="evenodd"
+                                                d="m24.8868 19.1288c-1.0274-.1308-2.036-.3815-3.0052-.7467-.7878-.29-1.6724-.1034-2.276.48-.797.8075-2.0493.9936-2.9664.3258-1.4484-1.055-2.7233-2.3295-3.7783-3.7776-.6681-.9168-.4819-2.1691.3255-2.9659.5728-.6019.7584-1.4748.4802-2.2577-.3987-.98875-.6792-2.02109-.8358-3.07557-.2043-1.03534-1.1138-1.7807-2.1694-1.77778h-3.18289c-.60654-.00074-1.18614.25037-1.60035.69334-.40152.44503-.59539 1.03943-.53345 1.63555.344 3.31056 1.47164 6.49166 3.28961 9.27986 1.64878 2.5904 3.84608 4.7872 6.43688 6.4356 2.7927 1.797 5.9636 2.9227 9.2644 3.289h.1778c.5409.0036 1.0626-.2 1.4581-.569.444-.406.6957-.9806.6935-1.5822v-3.1821c.0429-1.0763-.7171-2.0185-1.7782-2.2046z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- end section emergency -->
+        <!-- end section card -->
+        <section id="comments" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">التعليقات</h2>
+                <div id="comments-list"></div>
+                <!-- سيتم تحميل التعليقات هنا -->
+            </div>
+        </section>
+        <!-- start footer -->
+        <footer id="footer" class="footer pt-5 text-center">
+            <div class="pt-3" style="box-shadow: 1px -12px 36px -31px black;">
+                <div class="container">
+                    <div>
+                        <img src="assets/pic/logo/logo.png" width="110px" height="60px" alt="لوجو الشركة">
+                    </div>
+                    <ul class="example-2">
+                        <li class="icon-content">
+                            <a data-social="whatsapp" aria-label="Whatsapp" href="#" target="_blank">
+                                <div class="filled"></div>
+                                <svg xml:space="preserve" viewBox="0 0 24 24" class="bi bi-whatsapp" fill="currentColor" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="currentColor"
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z">
+                                </path>
+                            </svg>
+                            </a>
+                            <div class="tooltip">Whatsapp</div>
+                        </li>
+                        <li class="icon-content">
+                            <a data-social="facebook" aria-label="Facebook" href="#" target="_blank">
+                                <div class="filled"></div>
+                                <svg xml:space="preserve" viewBox="0 0 24 24" class="bi bi-facbook" fill="currentColor" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="currentColor"
+                                    d="M23.9981 11.9991C23.9981 5.37216 18.626 0 11.9991 0C5.37216 0 0 5.37216 0 11.9991C0 17.9882 4.38789 22.9522 10.1242 23.8524V15.4676H7.07758V11.9991H10.1242V9.35553C10.1242 6.34826 11.9156 4.68714 14.6564 4.68714C15.9692 4.68714 17.3424 4.92149 17.3424 4.92149V7.87439H15.8294C14.3388 7.87439 13.8739 8.79933 13.8739 9.74824V11.9991H17.2018L16.6698 15.4676H13.8739V23.8524C19.6103 22.9522 23.9981 17.9882 23.9981 11.9991Z">
+                                </path>
+                            </svg>
+                            </a>
+                            <div class="tooltip">Facebook</div>
+                        </li>
+                        <li class="icon-content">
+                            <a data-social="instagram" aria-label="Instagram" href="#" target="_blank">
+                                <div class="filled"></div>
+                                <svg xml:space="preserve" viewBox="0 0 16 16" class="bi bi-instagram" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="currentColor"
+                                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334">
+                                </path>
+                            </svg>
+                            </a>
+                            <div class="tooltip">Instagram</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="py-3 container">
+                    <p class="translatable">نحن هنا من أجلك من أجل ان نساعدك على تحديد وجهتك القادمة</p>
+                </div>
+                <div class="container contact-info">
+                    <ul class="list-unstyled row">
+                        <li class="col-md-6 col-sm-12 mb-2 translatable">القاهرة - مصر</li>
+                        <li class="col-md-6 col-sm-12 mb-2">0100 100 1000</li>
+                        <li class="col-md-6 col-sm-12 mb-2"><a href="#">dalilak@gmail.com</a></li>
+                        <li class="col-md-6 col-sm-12 mb-2"><a href="#" target="_blank">www.dalilak.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rights">
+                <hr class="my-1" />
+                <p class="translatable my-1">
+                    &copy; Designed by© 2025
+                </p>
+            </div>
+        </footer>
+        <!-- end footer -->
+
+
+
+        <!-- script -->
+
+        <!-- bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- js srcipt -->
+        <script src="assets/js/main.js"></script>
+
+        <script src="assets/js/comments.js"></script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", loadComments);
+        </script>
+</body>
+
+</html>
